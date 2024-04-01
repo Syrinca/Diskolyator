@@ -3,7 +3,7 @@
 Dannyy skript razrabotan dlya avtomaticheskogo udaleniya vsekh razdelov na kazhdom diske v sisteme s ispol'zovaniem instrumenta diskpart v komandnoy stroke operatsionnoy sistemy Windows.
 
 ### Ispol'zovanie
-1. Zapustite skript v komandnoy stroke.
+1. Zapustite skript cherez bat ili exe.
 2. Skript avtomaticheski opredelit vse diski v sisteme i udalit vse ikh razdely.
 
 ### Podrobnoe opisanie raboty
