@@ -1,34 +1,34 @@
-# Diskolyator
-### Naznachenie
-Dannyy skript razrabotan dlya avtomaticheskogo udaleniya vsekh razdelov na kazhdom diske v sisteme s ispol'zovaniem instrumenta diskpart v komandnoy stroke operatsionnoy sistemy Windows.
+# Дисколятор
+### Назначение
+Данный скрипт разработан для автоматического удаления всех разделов на каждом диске в системе с использованием инструмента diskpart в командной строке операционной системы Windows.
 
-### Ispol'zovanie
-1. Zapustite skript cherez bat ili exe.
-2. Skript avtomaticheski opredelit vse diski v sisteme i udalit vse ikh razdely.
+### Использование
+1. Запустите скрипт через bat или exe.
+2. Скрипт автоматически определит все диски в системе и удалит все их разделы.
 
-### Podrobnoe opisanie raboty
-1. Skript nachinaet s otklyucheniya vyvoda komand v komandnoy stroke s pomoshch'yu komandy `@echo off`, chtoby obespechit' bolee chistyy vyvod.
+### Подробное описание работы
+1. Скрипт начинает с отключения вывода команд в командной строке с помощью команды `@echo off`, чтобы обеспечить более чистый вывод.
 
-2. Zatem skript zapuskaet tsikl `for`, kotoryy vypolnyaet sleduyushchie deystviya:
-   - On otpravlyaet komandu `list disk` v `diskpart` i fil'truet vyvod s pomoshch'yu `findstr`, chtoby nayti stroki, soderzhashchie informatsiyu o diskakh.
-   - Dlya kazhdoy stroki s informatsiey o diske skript izvlekaet nomer diska i sokhranyaet ego v peremennuyu `%%a`.
+2. Затем скрипт запускает цикл `for`, который выполняет следующие действия:
+   - Он отправляет команду `list disk` в `diskpart` и фильтрует вывод с помощью `findstr`, чтобы найти строки, содержащие информацию о дисках.
+   - Для каждой строки с информацией о диске скрипт извлекает номер диска и сохраняет его в переменную `%%a`.
 
-3. Dlya kazhdogo naydennogo diska skript vypolnyaet sleduyushchie deystviya:
-   - Vybirayet disk s pomoshch'yu komandy `select disk %%a`, gde `%%a` - nomer diska.
-   - Udalet vse razdely na vybrannom diske s pomoshch'yu komandy `clean`.
-   - Zavershaet vypolneniye `diskpart` s pomoshch'yu komandy `exit`.
+3. Для каждого найденного диска скрипт выполняет следующие действия:
+   - Выбирает диск с помощью команды `select disk %%a`, где `%%a` - номер диска.
+   - Удаляет все разделы на выбранном диске с помощью команды `clean`.
+   - Завершает выполнение `diskpart` с помощью команды `exit`.
 
-4. Posle zaversheniya raboty so vsemi diskami skript zavershayet svoe vypolneniye.
+4. После завершения работы со всеми дисками скрипт завершает свое выполнение.
 
-### Primechaniya
-- Pozhaluysta, bud'te ostorozhny pri ispol'zovanii etogo skripta, tak kak on privedit k udaleniyu vsekh razdelov na kazhdom diske.
-- Rekomenduyetsya sozdat' rezervnuyu kopiyu vazhnykh dannykh pered vypolneniyem etogo skripta.
+### Примечания
+- Пожалуйста, будьте осторожны при использовании этого скрипта, так как он приведет к удалению всех разделов на каждом диске.
+- Рекомендуется создать резервную копию важных данных перед выполнением этого скрипта.
 
-### Trebovaniya
-- Operatsionnaya sistema Windows.
+### Требования
+- Операционная система Windows.
 
-### Avtor
-Skript razrabotan Syrinca.
+### Автор
+Скрипт разработан Syrinca.
 
-### Litsenziya
-Etot skript rasprostranyayetsya pod The GNU General Public License v3.0.
+### Лицензия
+Этот скрипт распространяется под The GNU General Public License v3.0.
