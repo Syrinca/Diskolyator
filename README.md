@@ -1,6 +1,6 @@
 # Diskolyator
 <p align="center">
-  <img src="https://github.com/Syrinca/Diskolyator/assets/165695271/7b8bf38d-abba-48e7-94e0-85927c1b7a5c" alt="Logo">
+  <img src="https://github.com/Syrinca/Diskolyator/assets/165695271/38391f5f-a6d7-4e93-95fb-15cff529e338" alt="Logo">
 
 ### Purpose
 This script is designed to automatically remove all partitions on each disk in the system using the diskpart tool in the Windows operating system command line.
