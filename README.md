@@ -1,34 +1,37 @@
-# Дисколятор
-### Назначение
-Данный скрипт разработан для автоматического удаления всех разделов на каждом диске в системе с использованием инструмента diskpart в командной строке операционной системы Windows.
+# Diskolyator
+<p align="center">
+  <img src="https://github.com/Syrinca/Diskolyator/assets/165695271/7b8bf38d-abba-48e7-94e0-85927c1b7a5c" alt="Logo">
 
-### Использование
-1. Запустите скрипт через bat или exe.
-2. Скрипт автоматически определит все диски в системе и удалит все их разделы.
+### Purpose
+This script is designed to automatically remove all partitions on each disk in the system using the diskpart tool in the Windows operating system command line.
 
-### Подробное описание работы
-1. Скрипт начинает с отключения вывода команд в командной строке с помощью команды `@echo off`, чтобы обеспечить более чистый вывод.
+### Usage
+1. Run the script via bat or exe.
+2. The script will automatically detect all disks in the system and remove all their partitions.
 
-2. Затем скрипт запускает цикл `for`, который выполняет следующие действия:
-   - Он отправляет команду `list disk` в `diskpart` и фильтрует вывод с помощью `findstr`, чтобы найти строки, содержащие информацию о дисках.
-   - Для каждой строки с информацией о диске скрипт извлекает номер диска и сохраняет его в переменную `%%a`.
+### Detailed Operation Description
+1. The script starts by turning off command output in the command line using the `@echo off` command to provide a cleaner output.
 
-3. Для каждого найденного диска скрипт выполняет следующие действия:
-   - Выбирает диск с помощью команды `select disk %%a`, где `%%a` - номер диска.
-   - Удаляет все разделы на выбранном диске с помощью команды `clean`.
-   - Завершает выполнение `diskpart` с помощью команды `exit`.
+2. Then the script initiates a `for` loop that performs the following actions:
+   - It sends the `list disk` command to `diskpart` and filters the output using `findstr` to find lines containing disk information.
+   - For each line with disk information, the script extracts the disk number and saves it in the variable `%%a`.
 
-4. После завершения работы со всеми дисками скрипт завершает свое выполнение.
+3. For each found disk, the script performs the following actions:
+   - Selects the disk using the `select disk %%a` command, where `%%a` is the disk number.
+   - Deletes all partitions on the selected disk using the `clean` command.
+   - Exits `diskpart` using the `exit` command.
 
-### Примечания
-- Пожалуйста, будьте осторожны при использовании этого скрипта, так как он приведет к удалению всех разделов на каждом диске.
-- Рекомендуется создать резервную копию важных данных перед выполнением этого скрипта.
+4. After completing operations on all disks, the script terminates its execution.
 
-### Требования
-- Операционная система Windows.
+### Notes
+- Please be cautious when using this script as it will lead to the deletion of all partitions on each disk.
+- It is recommended to create a backup of important data before running this script.
 
-### Автор
-Скрипт разработан Syrinca.
+### Requirements
+- Windows operating system.
 
-### Лицензия
-Этот скрипт распространяется под The GNU General Public License v3.0.
+### Author
+Script developed by Syrinca.
+
+### License
+This script is distributed under The GNU General Public License v3.0.
